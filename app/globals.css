@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f7fb;
+  color: #111827;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.page-shell {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+}
+
+.hero-card {
+  width: min(920px, 100%);
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 32px;
+  align-items: center;
+  padding: 40px;
+  border-radius: 28px;
+  background: #ffffff;
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.12);
+}
+
+.intro h1 {
+  margin: 0 0 16px;
+  font-size: clamp(36px, 5vw, 64px);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.intro p {
+  margin: 0;
+  max-width: 520px;
+  color: #4b5563;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.intro code {
+  padding: 2px 6px;
+  border-radius: 6px;
+  background: #eef2ff;
+  color: #3730a3;
+  font-size: 15px;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 16px !important;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: #ecfeff;
+  color: #0e7490 !important;
+  font-weight: 700;
+  font-size: 13px !important;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  background: #f9fafb;
+}
+
+.signup-form label {
+  margin-bottom: 8px;
+  color: #374151;
+  font-weight: 700;
+}
+
+.signup-form input {
+  width: 100%;
+  margin-bottom: 18px;
+  padding: 13px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  background: #ffffff;
+  outline: none;
+}
+
+.signup-form input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+.signup-form button {
+  margin-top: 6px;
+  padding: 14px 16px;
+  border: 0;
+  border-radius: 12px;
+  background: #2563eb;
+  color: #ffffff;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.signup-form button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.form-message {
+  margin: 16px 0 0;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.form-message.success {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.form-message.error {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+@media (max-width: 760px) {
+  .hero-card {
+    grid-template-columns: 1fr;
+    padding: 24px;
+  }
+}
